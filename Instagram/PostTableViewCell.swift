@@ -18,6 +18,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var commentButton: UIButton!//
+    @IBOutlet weak var commentLabel: UILabel!//
     
     
 
@@ -41,7 +42,10 @@ class PostTableViewCell: UITableViewCell {
 
         // キャプションの表示
         self.captionLabel.text = "\(postData.name!) : \(postData.caption!)"
-
+        
+        // コメントの表示
+        self.commentLabel.text = "\(postData.comment!)"//
+        
         // 日時の表示
         self.dateLabel.text = ""
         if let date = postData.date {
@@ -63,6 +67,8 @@ class PostTableViewCell: UITableViewCell {
             let buttonImage = UIImage(named: "like_none")
             self.likeButton.setImage(buttonImage, for: .normal)
         }
+        
+        
     }
     
     

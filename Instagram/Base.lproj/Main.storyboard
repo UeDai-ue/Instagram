@@ -175,7 +175,7 @@
         <!--Comment View Controller-->
         <scene sceneID="KQh-3u-PCk">
             <objects>
-                <viewController id="dPN-GX-Ipe" customClass="CommentViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Comment" id="dPN-GX-Ipe" customClass="CommentViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uZx-cC-kSB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
