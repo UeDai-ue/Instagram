@@ -116,19 +116,22 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @objc func handleCommentButton(_ sender: UIButton, forEvent event: UIEvent) {
         print("DEBUG_PRINT: commentボタンがタップされました。")
-
+        
         // タップされたセルのインデックスを求める
         let touch = event.allTouches?.first
         let point = touch!.location(in: self.tableView)
         let indexPath = tableView.indexPathForRow(at: point)
-
+        
         // 配列からタップされたインデックスのデータを取り出す
         let postData = postArray[indexPath!.row]
+        
+        //let CommentViewController.postData = postData
+        
         
         let CommentViewController = self.storyboard?.instantiateViewController(withIdentifier: "Comment")
         self.present(CommentViewController!, animated: true, completion: nil)
         
-//        
+        
     }
     
 
