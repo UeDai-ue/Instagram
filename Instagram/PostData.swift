@@ -12,7 +12,7 @@ class PostData: NSObject {
     var likes: [String] = []
     var isLiked: Bool = false
     
-    var comment: String?//
+    var comment: [String] = []//
     
     
     
@@ -41,7 +41,10 @@ class PostData: NSObject {
             }
         }
         
-        self.comment = postDic["comment"] as? String//
+        if let comment = postDic["comment"] as? [String] {
+            self.comment = comment
+        }
+        
         
         
         

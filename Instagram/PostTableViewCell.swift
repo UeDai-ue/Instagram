@@ -44,8 +44,18 @@ class PostTableViewCell: UITableViewCell {
         self.captionLabel.text = "\(postData.name!) : \(postData.caption!)"
         
         // コメントの表示
+        if postData.comment.isEmpty {
+            self.commentLabel.text = ""
+        }else{
+            var displayComment = ""
+            
+            for comment in postData.comment {
+                displayComment = comment + "\n"
+            }
+            self.commentLabel.text = displayComment
+        }
         
-        self.commentLabel.text = "\(postData.comment!)"//
+        
         
         // 日時の表示
         self.dateLabel.text = ""
