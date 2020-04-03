@@ -49,8 +49,8 @@ class PostTableViewCell: UITableViewCell {
         }else{
             var displayComment = ""
             
-            for comment in postData.comment {
-                displayComment = comment + "\n"
+            for commnen in postData.comment {
+                displayComment += commnen + "\n"
             }
             self.commentLabel.text = displayComment
         }

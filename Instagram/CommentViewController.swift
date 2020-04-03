@@ -17,7 +17,7 @@ class CommentViewController: UIViewController {
         
         let name = Auth.auth().currentUser?.displayName
         let comment = commentTextField.text!
-        let nameComment = name! + ":" + comment
+        let nameComment = name! + " : " + comment
         
         // 入力されていない時はHUDを出して何もしない
         if comment.isEmpty {
